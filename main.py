@@ -56,7 +56,7 @@ word_counts = extract_word_counts_from_pdfs(pdf_paths)
 sorted_word_counts = sorted(word_counts.items(), key=lambda item: item[1], reverse=True)
 
 # 상위 1000개 단어를 CSV로 저장
-df = pd.DataFrame(sorted_word_counts[:1000], columns=['Word', 'Frequency'])
+df = pd.DataFrame(sorted_word_counts[:2000], columns=['Word', 'Frequency'])
 df.to_csv('word_frequencies.csv', index=False)
 
 # 상위 100개 단어 시각화
